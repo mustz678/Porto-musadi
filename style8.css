@@ -1,0 +1,111 @@
+*, html, body {
+    margin: 0;
+    padding: 0;
+    font-family: "Permanent Marker", cursive;
+}
+
+:root {
+    --bg-primary: #a50303c2;
+    --bg-secodary: rgb(5, 84, 255);
+    --text-primary: white;
+    --text-secondary:black;
+    --text-secondrary2:red;
+}
+
+.container {
+    width: 100%;
+    display: block;
+    height: auto;
+    min-height: 100vh; 
+    background-color: var(--bg-primary);
+}
+
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    width: 40%;
+    border: 2px solid white;
+    color: var(--text-secondary);
+    background-color: var(--text-primary);
+    margin: 8px;
+    padding: 32px;
+    box-shadow: 2px 2px 2px 2px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.icons {
+    font-size: 26px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+   color: var(--text-secondrary2);
+}
+
+.icons2 {
+    font-size: 26px;
+    margin-top: 7px;
+    margin-bottom: 7px;
+   color: var(--bg-secodary);
+}
+
+.btn {
+    margin-top: 15px;
+    padding: 8px;
+    cursor: pointer;
+    border: none;
+    width: 100%;
+}
+
+.btn:hover {
+    background-color: var(--bg-primary);
+    color: var(--text-primary);
+    -ms-transform: rotate(3deg);
+    transform: rotate(3deg);
+    transition: .5s ease-in-out;
+}
+
+.container2 {
+    display: none;
+}
+
+@media screen and (max-width: 476px) {
+    .container {
+        background-color: white;
+        display: block;
+    }
+
+    .card {
+        width: 90%;
+    }
+
+    .text-center {
+        font-size: 25px;
+    }
+
+    .icons {
+        font-size: 2em;
+    }
+
+    .icons2 {
+        font-size: 2em;
+    }
+}
+
+@media screen and (min-width: 1450px) {
+    .container {
+        display: none;
+    }
+
+    .container2 {
+        display: block;
+    }
+}

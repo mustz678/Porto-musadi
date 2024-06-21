@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SESI 6</title>
+    <link href="style3.css" rel="stylesheet" />
+</head>
+
+<div class="container">
+    <nav>
+        <a onclick="reRender()" id="home">HOME</a>
+        <a onclick="darkMode()" id="mode">MODE WHITE</a>
+        <a onclick="redMode()" id="modered">MODE RED</a>
+    </nav>
+    <h1>sesi 6</h1>
+    <p class="info" id="info"></p>
+</div>
+
+<!-- initialigin function -->
+<script>
+    let body = document.body;
+    let info = document.getElementById("info");
+    let mode = document.getElementById("mode");
+    let modered = document.getElementById("modered");
+    let home = document.getElementById("home");
+
+    const darkLimit = 5;
+    let darkCounter = 0;
+    let darkRemainingLeft;
+
+
+    function darkMode() {
+        if (darkRemainingLeft == 1) {
+            info.textContent = "fitur switch mode habis";
+            mode.style.display = "none";
+            modered.style.display = "none";
+            home.textContent = "Restart";
+            return;
+        }
+
+        darkCounter += 1;
+        darkRemainingLeft = darkLimit - darkCounter;
+
+        // render info element
+        info.textContent = `Dark mode dipakai ${darkCounter}x, terisa ${darkRemainingLeft}`
+
+        body.classList.toggle("dark");
+        mode.classList.toggle("white");
+
+        if (body.classList.contains("dark")) {
+            mode.textContent = "MODE DARK";
+        } else {
+            mode.textContent = "MODE WHITE";
+        }
+    }
+
+    const redLimit = 5;
+    let redCounter = 0;
+    let redRemainingLeft = redLimit;
+
+    function redMode() {
+        if (redRemainingLeft == 1) {
+            info.textContent = "fitur switch mode habis";
+            mode.style.display = "none";
+            modered.style.display = "none";
+            home.textContent = "Restart";
+            return;
+        }
+
+        redCounter += 1;
+        redRemainingLeft = redLimit - redCounter;
+
+        // Render info element
+        info.textContent = `Red mode dipakai ${redCounter}x, tersisa ${redRemainingLeft} kali`;
+
+        body.classList.toggle("red");
+        modered.classList.toggle("red");
+
+        if (body.classList.contains("red")) {
+            modered.textContent = "MODE RED";
+        } else {
+            modered.textContent = "MODE WHITE";
+        }
+    }
+
+
+    function reRender() {
+        location.reload();
+    }
+
+</script>
+
+</body>
+
+</html>

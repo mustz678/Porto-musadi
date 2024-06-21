@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    /* clearing css */
+    *, html, body {
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box;
+    }
+
+    .parallax {
+        width: 100%;
+        height: 100vh;
+    }
+
+    .intro {
+        background-image: url("city.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .content {
+        background-image: url("village.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .footer {
+        background-image: url("mountain.jpg");
+        background-repeat: no-repeat;
+    }
+
+    .cta {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+
+    .title {
+        font-weight: bold;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 45px;
+        letter-spacing: 20px;
+        color: white;
+        text-align: center;
+    }
+
+
+</style>
+<body>
+    <div class="parallax intro">
+        <div class="cta">
+            <div class="title">Hii.. My Name Mustz</div>
+        </div>
+    </div>
+    <div class="parallax content">
+        <div class="cta">
+            <div class="title">I am a WEB DEVELOPER</div>
+    </div>
+    <div class="parallax footer">
+        <div class="cta">
+            <div class="title">This is Web Design HTML CSS parallax</div>
+        </div>
+    </div>
+</body>
+</html>

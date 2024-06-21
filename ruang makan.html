@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <title>latihan lampu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.css" rel="stylesheet" />
+</head>
+
+<body>
+    <div class="p-4 bg-gray-800 min-h-screen w-full">
+        <div class="sm:hidden mb-4">
+            <label for="Tab" class="sr-only">Tab</label>
+            <select id="Tab" class="w-full rounded-md border-gray-200"  onchange="location = this.value";>
+                <option value="index2.html">HOME</option>
+                <option value="ruang makan.html">RUANG MAKAN</option>
+                <option value="RUANG KELUARGA.HTML">RUANG KELUARGA</option>
+                <option value="RUANG TIDUR.HTML">RUANG TIDUR</option>
+                <option value="RUANG TAMU.HTML">RUANG TAMU</option>
+            </select>
+        </div>
+
+        <div class="hidden sm:block mb-4">
+            <nav class="flex gap-6" aria-label="Tabs">
+                <a href="index2.html" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                    HOME
+                </a>
+
+                <a href="ruang makan.html" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                    RUANG MAKAN
+                </a>
+
+                <a href="RUANG KELUARGA.HTML" class="shrink-0 rounded-lg p-2 text-sm font-medium text-gray-500 hover:bg-gray-50 hover:text-gray-700">
+                    RUANG KELUARGA
+                </a>
+
+                <a href="RUANG TIDUR.HTML" class="shrink-0 rounded-lg bg-gray-100 p-2 text-sm font-medium text-gray-700" aria-current="page">
+                    RUANG TIDUR
+                </a>
+
+                <a href="RUANG TAMU.HTML" class="shrink-0 rounded-lg bg-gray-100 p-2 text-sm font-medium text-gray-700" aria-current="page">
+                    RUANG TAMU
+                </a>
+            </nav>
+        </div>
+
+        <div class="flex justify-center items-center min-h-screen w-full bg-gray-800 gap-4">
+            <!-- lampu 1 -->
+            <div class="flex flex-col gap-2 items-center">
+                <img src="asset/image/off.gif" alt="" id="lampu1" />
+                <label for="default-toggle1" class="inline-flex items-center cursor-pointer">
+                    <input type="checkbox" id="default-toggle1" class="sr-only peer" onchange="saklar()">
+                    <div class="relative w-11 h-6 bg-gray-200 peer-focus:outline-none peer-focus:ring-4 peer-focus:ring-blue-300 dark:peer-focus:ring-blue-800 rounded-full peer dark:bg-gray-700 peer-checked:after:translate-x-full rtl:peer-checked:after:-translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all dark:border-gray-600 peer-checked:bg-blue-600"></div>
+                    <span class="ms-3 text-sm font-medium text-gray-900 dark:text-gray-300"></span>
+                </label>
+            </div>
+        </div>
+    </div>
+
+    <!-- java script -->
+    <script src="saklar.js" type="application/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.3.0/flowbite.min.js"></script>
+</body>
+
+</html>
